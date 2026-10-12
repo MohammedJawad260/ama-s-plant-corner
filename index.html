@@ -1,14 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Basic page settings and mobile responsiveness -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ama's Plant Corner</title>
+
+    <!-- Page title shown in the browser tab -->
+    <title>Ama's Plant Corner | Plants , Pots &Plant Advice</title>
+    
+    <!-- Connect the HTML page to our CSS stylesheet -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- Allow keyboard users to skip navigation and jump to the main content. -->
+<a class="skip-link" href="#main-content">Skip to main content</a>
 
-    <h1>Ama's Plant Corner</h1>
-    <p>Friendly plants and advice for first-time plant owners.</p>
-    
+    <!-- Header contains the business name and main navigation -->
+    <header>
+
+        <nav>
+            <!-- Business name acts as a link back to the homepage -->
+            <a href="index.html">Ama's Plants Corner</a>
+
+            <!-- Navigation links help visitors move around the page -->
+            <ul>
+                <li><a href="#plants">Plants</a></li>
+                <li><a href="#advice">Advice</a></li>
+                <li><a href="#visit">Visit Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main content of the website -->
+    <main id="main-content">
+
+        <!--Hero section introduces the shop and its main purpose-->
+        <section>
+            <h1>Bring a little green home.</h1>
+
+            <p>
+                Friendly plants, plots and helpful advice for first-time plant comers.
+            </p>
+
+
+            <!-- Main call-to-action directs visitors to the shop information-->
+            <a href="#visit">Visit the shop</a>
+        </section>
+
+        <!--Products section shows what Ama sells-->
+        <section id="plants">
+            <h2>What we offer</h2>
+            
+            <!-- Each article represents one product category-->
+         <article>
+            <h3>Houseplants</h3>
+            <p>
+                find a plant that feels right for your home.
+            </p>
+         </article>
+
+         <article>
+            <h3>Pots</h3>
+            <p>
+                Choose a pot to give your new plant a happy home.
+            </p>
+         </article>
+
+         <article>
+            <h3>Soil</h3>
+            <p>
+                Get the right soil to help your plants grow well.
+            </p>
+         </article>
+</section>
+
+<!--Advice section addresses the needs the needs of first-time plant owners-->
+<section id="advice">
+    <h2>Plant advice without the guesswork</h2>
+    <p>
+        Not sure how much water your plant needs? Wondering where it should live? Ask Ama. Friendly advice is always available.
+
+    </p>
+
+</section>
+
+<!--Visit section makes the physical shop easy to find-->
+<section id="visit">
+    <h2>Visit the shop</h2>
+
+    <!--Address element identifies the shop's location information-->
+    <address>
+         Ama's Plant Corner<br>
+         14 Okaishie Lane<br>
+         Accra, Ghana
+    </address>
+
+
+</section>
+
+    </main>
+
+    <!--Footer contains basic information about the website-->
+    <footer>
+        <p>&copy; 2026 Ama's Plant Corner</p>
+    </footer>
+
 </body>
 </html>

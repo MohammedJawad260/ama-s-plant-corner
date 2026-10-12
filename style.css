@@ -1,0 +1,380 @@
+
+
+/* =========================================
+   1. RESET DEFAULT BROWSER SPACING
+   Remove default margins and padding.
+   Make element sizing easier to calculate.
+   ========================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* =========================================
+   2. GENERAL PAGE STYLING
+   Set the background, text colour, font,
+   text size, line spacing and page spacing.
+   ========================================= */
+body {
+    background-color: #f8f5ed;
+    color: #26332a;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+/* =========================================
+   3. WEBSITE HEADER
+   Give the header a dark green background
+   and space around its contents.
+   ========================================= */
+header {
+    background-color: #2f4f3a;
+    padding: 20px;
+}
+
+/* =========================================
+   4. NAVIGATION BAR
+   Place the website name and navigation
+   links on the same horizontal line.
+   ========================================= */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Style the main website name or brand link. */
+nav > a {
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* Display navigation links in a horizontal row. */
+nav ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+
+/* Style the individual navigation links. */
+nav li a {
+    color: white;
+    text-decoration: none;
+
+    /* Make link colour changes happen smoothly. */
+    transition: color 0.3s ease;
+}
+
+/* Change the link colour when the mouse hovers over it. */
+nav li a:hover {
+    color: #dfe9dc;
+}
+
+/* =========================================
+   5. MAIN CONTENT CONTAINER
+   Centre the page and keep its content readable.
+   ========================================= */
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Keep the main page sections visually separated. */
+main > section {
+    margin-bottom: 24px;
+}
+
+/* Remove the extra gap after the final main section. */
+main > section:last-child {
+    margin-bottom: 0;
+}
+
+/* =========================================
+   6. MAIN HEADINGS
+   Give headings a consistent green colour
+   and readable sizes.
+   ========================================= */
+h1 {
+    color: #2f4f3a;
+    font-size: 36px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: #2f4f3a;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+h3 {
+    color: #2f4f3a;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+/* =========================================
+   7. PARAGRAPH STYLING
+   Limit paragraph width to make long text
+   easier to read.
+   ========================================= */
+main p {
+    max-width: 700px;
+}
+
+/* =========================================
+   8. HERO SECTION
+   Style the first section inside main.
+   Give it a soft green background and space.
+   ========================================= */
+main > section:first-child {
+    background-color: #dfe9dc;
+    padding: 40px 20px;
+}
+
+/* Make the hero introduction slightly larger. */
+main > section:first-child p {
+    font-size: 20px;
+    max-width: 600px;
+    margin-top: 20px;
+}
+
+/* =========================================
+   9. VISIT THE SHOP BUTTON
+   Style the link so it looks like a button.
+   Make it large enough to tap comfortably.
+   ========================================= */
+main > section:first-child a {
+    background-color: #2f4f3a;
+    color: white;
+    display: inline-block;
+    padding: 12px 20px;
+    min-height: 44px;
+    text-decoration: none;
+    border-radius: 6px;
+    margin-top: 20px;
+
+    /* Smoothly animate colour and movement changes. */
+    transition: background-color 0.3s ease,
+                transform 0.3s ease;
+}
+
+/* Change the button colour and lift it slightly on hover. */
+main > section:first-child a:hover {
+    background-color: #6f8f72;
+    transform: translateY(-2px);
+}
+
+/* =========================================
+   10. WHAT WE OFFER SECTION
+   Place the heading above the three offer cards.
+   Arrange the cards in three equal columns.
+   ========================================= */
+#plants {
+    padding: 40px 20px;
+
+    /* Arrange the heading and cards using CSS Grid. */
+    display: grid;
+
+    /* Create three equal columns for the offer cards. */
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+
+    /* Add space between the heading and cards. */
+    gap: 20px;
+}
+
+/* Make What We Offer span the full width above the cards. */
+#plants h2 {
+    grid-column: 1 / -1;
+    margin-bottom: 0;
+}
+
+/* =========================================
+   11. PLANT OFFER CARDS
+   Give Houseplants, Pots and Soil white
+   backgrounds, rounded corners and spacing.
+   ========================================= */
+#plants article {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+
+    /* Smoothly animate card movement and shadow. */
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+/* Lift the card and add a soft shadow on hover. */
+#plants article:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(38, 51, 42, 0.12);
+}
+
+/* Style the headings inside the offer cards. */
+#plants article h3 {
+    color: #2f4f3a;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+/* =========================================
+   12. PLANT ADVICE SECTION
+   Use a soft green background to distinguish
+   the advice section from the other content.
+   ========================================= */
+#advice {
+    background-color: #dfe9dc;
+    padding: 40px 20px;
+    margin-bottom: 20px;
+}
+
+/* Keep advice paragraphs at a comfortable width. */
+#advice p {
+    max-width: 700px;
+}
+
+/* =========================================
+   13. SHOP VISIT SECTION
+   Centre the shop details and add spacing.
+   ========================================= */
+#visit {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+/* Display the address normally and space its lines. */
+#visit address {
+    font-style: normal;
+    margin-bottom: 20px;
+    line-height: 1.8;
+}
+
+/* =========================================
+   14. FOOTER
+   Use a dark green background, white text
+   and centred alignment.
+   ========================================= */
+footer {
+    background-color: #2f4f3a;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* =========================================
+   15. KEYBOARD ACCESSIBILITY
+   Show a visible outline when a user focuses
+   a link using a keyboard.
+   ========================================= */
+a:focus-visible {
+    outline: 3px solid #6f8f72;
+    outline-offset: 4px;
+}
+
+/* =========================================
+   16. MOBILE RESPONSIVENESS
+   Apply these changes on screens 700px wide
+   or smaller, including most phones.
+   ========================================= */
+@media (max-width: 700px) {
+
+    /* Reduce page padding to create more room. */
+    body {
+        padding: 10px;
+    }
+
+    /* Stack the navigation items vertically. */
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+        width: 100%;
+    }
+
+    /* Stack navigation links and space them out. */
+    nav ul {
+        flex-direction: column;
+        gap: 14px;
+    }
+
+    /* Make the main heading fit smaller screens. */
+    h1 {
+        font-size: 32px;
+    }
+
+    /* Slightly reduce the second-level heading size. */
+    h2 {
+        font-size: 25px;
+    }
+
+    /* Reduce hero section padding on phones. */
+    main > section:first-child {
+        padding: 30px 16px;
+    }
+
+    /* Keep the hero paragraph readable on phones. */
+    main > section:first-child p {
+        font-size: 18px;
+    }
+
+    /* Stack the offer cards vertically on phones. */
+    #plants {
+        grid-template-columns: 1fr;
+        padding: 30px 16px;
+    }
+
+    /* Reduce card padding on smaller screens. */
+    #plants article {
+        padding: 16px;
+    }
+
+    /* Reduce spacing in the advice and visit sections. */
+    #advice,
+    #visit {
+        padding: 30px 16px;
+    }
+}
+
+/* =========================================
+   17. REDUCED MOTION ACCESSIBILITY
+   Reduce animations for visitors who prefer
+   less movement on their devices.
+   ========================================= */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* =========================================
+   18. SKIP LINK ACCESSIBILITY
+   Hide the skip link until a keyboard user
+   focuses on it.
+   ========================================= */
+.skip-link {
+    position: absolute;
+    top: -100px;
+    left: 10px;
+    background-color: #2f4f3a;
+    color: white;
+    padding: 12px 16px;
+    z-index: 1000;
+    border-radius: 6px;
+}
+
+/* Make the skip link visible when selected with the keyboard. */
+.skip-link:focus {
+    top: 10px;
+}
